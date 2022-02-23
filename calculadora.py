@@ -12,7 +12,7 @@ hex > bin
 
 """
 while True:
-    o = input('Opções \n1 - dec > bin \n2 - dec > oct \n3 - dec > hex')
+    o = input('Opções \n1 - dec > bin \n2 - dec > oct \n3 - dec > hex \n4 - bin > dec')
     if o == '1':
         r = ''
         n = int(input('Digite o valor:'))
@@ -73,6 +73,21 @@ while True:
                 
                 break
         print(r)
+    if o == '4':
+        z = 0
+        n = input('Digite o valor:')
+        while True:
+            tc = n.count('')
+            ca = 2
+            for c in range (0,tc-1,1):
+                ni = int(n[tc - ca])
+                z = z + ((2**c) * ni)
+                ca = ca + 1
+            print(z)
+            break
+
+
+
 
 
     if o == 'q':
